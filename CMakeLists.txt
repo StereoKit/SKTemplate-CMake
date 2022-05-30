@@ -5,8 +5,8 @@ project(SKNativeTemplate VERSION "0.1.0" LANGUAGES CXX C)
 # Grab and build StereoKit from the GitHub repository. Here we're setting SK up
 # as a statically linked library.
 include(FetchContent)
-set(SK_BUILD_TESTS       OFF)
-set(SK_BUILD_SHARED_LIBS OFF)
+set(SK_BUILD_TESTS       OFF CACHE INTERNAL "")
+set(SK_BUILD_SHARED_LIBS OFF CACHE INTERNAL "")
 FetchContent_Declare(
   StereoKitC
   GIT_REPOSITORY https://github.com/StereoKit/StereoKit.git
