@@ -10,7 +10,7 @@ set(SK_BUILD_SHARED_LIBS OFF CACHE INTERNAL "")
 FetchContent_Declare(
   StereoKitC
   GIT_REPOSITORY https://github.com/StereoKit/StereoKit.git
-  GIT_TAG        v0.3.5
+  GIT_TAG        v0.3.6
 )
 FetchContent_MakeAvailable(StereoKitC)
 
