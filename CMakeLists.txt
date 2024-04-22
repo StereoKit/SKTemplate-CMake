@@ -8,6 +8,8 @@ if (ANDROID)
   add_library               (${PROJECT_NAME} SHARED)
   target_sources            (${PROJECT_NAME} PRIVATE ${CMAKE_ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c)
   target_include_directories(${PROJECT_NAME} PUBLIC  ${CMAKE_ANDROID_NDK}/sources/android/native_app_glue)
+
+  include(cmake/androidpack.cmake)
 else()
   # Non-android projects are just regular executables.
   add_executable(${PROJECT_NAME})
