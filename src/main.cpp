@@ -6,12 +6,12 @@ mesh_t     cube_mesh;
 material_t cube_mat;
 pose_t     cube_pose = {{0,0,-0.5f}, quat_identity};
 
-int main(void) {
-    sk_settings_t settings = {};
-	settings.app_name           = "SKNativeTemplate";
-	settings.assets_folder      = "Assets";
-	settings.display_preference = display_mode_mixedreality;
-	if (!sk_init(settings))
+sk_settings_t app_settings = {"SKNativeTemplate"};
+
+int app_main(int argc, char **argv) {
+	app_settings.assets_folder = "Assets";
+	app_settings.mode          = app_mode_xr;
+	if (!sk_init(app_settings))
 		return 1;
 
     cube_mesh = mesh_gen_rounded_cube(vec3_one * 0.1f, 0.02f, 4);
