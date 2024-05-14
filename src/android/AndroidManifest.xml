@@ -3,7 +3,7 @@
 	<uses-sdk android:minSdkVersion="29" android:targetSdkVersion="32" />
 	
 	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:label="@string/app_name" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
-        <activity android:name="android.app.NativeActivity" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden|screenSize">
+        <activity android:name="android.app.NativeActivity" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden|screenSize" android:exported="true">
             <meta-data android:name="android.app.lib_name" android:value="SKNativeTemplate" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,8 +1,15 @@
+# Build for Android
+# mkdir build_android
+# cd build_android
+# cmake -G Ninja -DCMAKE_TOOLCHAIN_FILE="cmake/android.toolchain.cmake" ..
+# cmake --build . -j16
 
 cmake_minimum_required(VERSION 3.21)
 project(SKNativeTemplate VERSION "0.1.0" LANGUAGES CXX C)
 
 if (ANDROID)
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/${CMAKE_ANDROID_ARCH_ABI})
+
   # Android projects are shared libraries wrapped in an APK. Sprinkle in a
   # little bit of glue code to talk to the parent system, and we're good to go.
   add_library               (${PROJECT_NAME} SHARED)
